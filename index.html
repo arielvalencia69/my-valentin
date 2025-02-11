@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi Valentín?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6e6;
+            color: #d63031;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #e84393;
+            font-size: 2.5em;
+        }
+        .heart {
+            color: #e84393;
+            font-size: 3em;
+        }
+        .message {
+            font-style: italic;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e84393;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #fd79a8;
+        }
+        #no-btn {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi Valentín?</h1>
+        <div class="heart">❤️</div>
+        <p class="message">
+            Hola mi vida hermosa, esta es mi modesta cartita para pedirte que seas mi Valentín. 
+            Perdón si no es una birkin bag, pero lo hice con mucho amor e internet JAJA. 
+            Espero un "Sí" por respuesta, de lo contrario significa que me odias y detestas mi presencia.  
+        </p>
+        <p>Besitos💕</p>
+        <button class="button" onclick="aceptar()">Sí, acepto amor</button>
+        <button class="button" id="no-btn" onmouseover="moverBoton()">no, q asco mejor nadota</button>
+    </div>
+
+    <script>
+        function aceptar() {
+            alert("¡Sabía que dirías que sí! ❤️💖 Te amo mucho, mi vida hermosa 😘");
+        }
+
+        function moverBoton() {
+            let noBtn = document.getElementById("no-btn");
+            let x = Math.random() * (window.innerWidth - 150);
+            let y = Math.random() * (window.innerHeight - 150);
+            noBtn.style.position = "absolute";
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
